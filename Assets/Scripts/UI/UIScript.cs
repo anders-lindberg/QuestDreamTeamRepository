@@ -2,17 +2,18 @@ using UnityEngine;
 
 public class UIScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Starthjh()
     {
         
     }
 
-    // Update is called once per frame
+    //  ændring i linje er vist som blå linje til venstre
     void Update()
     {
 
     }
-    //testing new changed
+    //testing new changed testing af inline view
     //2222 test2222
+    //this is my new feature
+    //rød trekant indikerer hvis en linje er blevet fjernet helt, grøn er ny linje
 }
