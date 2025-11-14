@@ -6,13 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     private InputAction move;
     private InputAction jump;
+    private InputAction throwPickaxe;
+    public Transform pickaxeSpawnPoint;
+    public GameObject pickaxePrefab;
     Vector2 horizontalMovement;
     [Header("Movement floats")]
     [SerializeField]
     float jumpForce = 5f;
     [SerializeField] float moveSpeed = 3f;
     [Header("Player Component referencer")]
-    Rigidbody2D playerRB;
+    private Rigidbody2D playerRB;
     [Header("Grounding")]
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform groundCheck;
@@ -22,19 +25,30 @@ public class PlayerMovement : MonoBehaviour
     {
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
+        throwPickaxe = InputSystem.actions.FindAction("Attack");
         playerRB = GetComponent<Rigidbody2D>();
         move.Enable();
         jump.Enable();
+        throwPickaxe.Enable();
         jump.performed += Jump;
         jump.canceled += Jump;
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if (throwPickaxe.WasPressedThisFrame())
+        {
+            Instantiate(pickaxePrefab, transform.position, Quaternion.identity);
+        }
+        
+    }
     void FixedUpdate()
     {
         Move();
         
     }
+    
     void Move()
     {
         float horizontalMovement = move.ReadValue<Vector2>().x;
@@ -56,4 +70,5 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.9f, 0.1f), CapsuleDirection2D.Horizontal, 0, groundLayer);
     } 
+
 }
