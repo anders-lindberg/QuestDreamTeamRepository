@@ -199,8 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f4fe16bf9bd2948868b6168822710a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickaxePrefab: {fileID: 8890610712737156061, guid: 2f8081c6040ce52428cc7d108d3b433b, type: 3}
   jumpForce: 5
   moveSpeed: 3
+  throwCooldown: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
