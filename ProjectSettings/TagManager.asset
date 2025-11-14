@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - GroundCheckLayer
   - 
   - 
   - 
@@ -40,12 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: baggrund
-    uniqueID: 3565037
-    locked: 0
-  - name: forgrund
-    uniqueID: 188933427
     locked: 0
   m_RenderingLayers:
   - Default
