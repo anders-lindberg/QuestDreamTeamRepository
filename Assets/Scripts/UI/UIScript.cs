@@ -16,5 +16,5 @@ public class UIScript : MonoBehaviour
     //2222 test2222
     //this is my new feature
     //rød trekant indikerer hvis en linje er blevet fjernet helt, grøn er ny linje
-    // hej axel
+    // hej axelyryryrryr
 }
