@@ -25,6 +25,7 @@ public class HurtBoxClass : MonoBehaviour
         if(hp != null && !other.CompareTag(sourceTag))
         {
             hp.TakeDamage(damageAmount);
+            Destroy(gameObject);
         }
         
     }
