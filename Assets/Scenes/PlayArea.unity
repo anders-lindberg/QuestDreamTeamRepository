@@ -487,6 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89f1be8361380242acad5b917d865f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtBox: {fileID: 0}
+  breakVFX: {fileID: 0}
 --- !u!61 &1875020440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -521,7 +523,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0.14356303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -531,7 +533,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.25452757}
   m_EdgeRadius: 0
 --- !u!212 &1875020441
 SpriteRenderer:
