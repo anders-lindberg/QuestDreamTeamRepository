@@ -10,15 +10,22 @@ public class HurtBoxClass : MonoBehaviour
     {
         Destroy(gameObject, lifeSpan);
     }
-    void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag(sourceTag))
+        
+        IDamageable hp = other.GetComponent<IDamageable>();
+        if(hp == null)
         {
-            IDamageable hp = other.GetComponent<IDamageable>();
-            if(hp != null)
-            {
-                hp.TakeDamage(damageAmount);
-            }
+            hp = other.GetComponentInParent<IDamageable>();
         }
+        if(hp == null)
+        {
+            hp = other.GetComponentInChildren<IDamageable>();
+        }
+        if(hp != null && !other.CompareTag(sourceTag))
+        {
+            hp.TakeDamage(damageAmount);
+        }
+        
     }
 }
