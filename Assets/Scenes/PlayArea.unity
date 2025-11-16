@@ -129,6 +129,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 684410117504193422, guid: ad98acd242958224eabd9379cad5b2c7, type: 3}
   m_PrefabInstance: {fileID: 874486321014072525}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237248540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6746926836540228081, guid: d3483852a349a6843ac921972be56c43, type: 3}
+  m_PrefabInstance: {fileID: 1753831985782711617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1237248546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237248540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123f33fd601f4ef449e4c063af8fe203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1515387819
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89f1be8361380242acad5b917d865f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtBox: {fileID: 0}
+  hurtBoxPrefab: {fileID: 7209104293922541972, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
   breakVFX: {fileID: 0}
 --- !u!61 &1875020440
 BoxCollider2D:
@@ -752,10 +769,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7512376576726618556, guid: d3483852a349a6843ac921972be56c43, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5493852119756052513, guid: d3483852a349a6843ac921972be56c43, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6746926836540228081, guid: d3483852a349a6843ac921972be56c43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1237248546}
   m_SourcePrefab: {fileID: 100100000, guid: d3483852a349a6843ac921972be56c43, type: 3}
 --- !u!1001 &2449169500802665716
 PrefabInstance:
@@ -818,6 +843,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 005746804bfc04349bbad74c79fbb8fc, type: 3}
+--- !u!1001 &3695382308349310608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8970184
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3395903
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.021154905
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149619864204592700, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209104293922541972, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
+      propertyPath: m_Name
+      value: StalaktitHurtBox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -827,3 +909,4 @@ SceneRoots:
   - {fileID: 1939311616}
   - {fileID: 1753831985782711617}
   - {fileID: 1875020442}
+  - {fileID: 3695382308349310608}

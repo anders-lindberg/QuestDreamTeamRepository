@@ -3,7 +3,7 @@ using UnityEngine;
 public class Stalakit : MonoBehaviour
 {
     private Rigidbody2D stalRb;
-    [SerializeField] private GameObject hurtBox;
+    [SerializeField] private GameObject hurtBoxPrefab;
     [SerializeField] private GameObject breakVFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,9 +26,9 @@ public class Stalakit : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-       if(hurtBox != null)
+       if(hurtBoxPrefab != null)
         {
-            Instantiate(hurtBox, transform.position, Quaternion.identity);
+            Instantiate(hurtBoxPrefab, transform.position, Quaternion.identity);
         }
         if(breakVFX != null)
         {
