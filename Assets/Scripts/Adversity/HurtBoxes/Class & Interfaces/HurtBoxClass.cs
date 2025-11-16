@@ -12,9 +12,9 @@ public class HurtBoxClass : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(sourceTag))
         {
-            PlayerHealth hp = other.GetComponent<PlayerHealth>();
+            IDamageable hp = other.GetComponent<IDamageable>();
             if(hp != null)
             {
                 hp.TakeDamage(damageAmount);
