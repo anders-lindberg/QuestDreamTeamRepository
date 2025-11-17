@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, jumpForce);
+            SoundEffectManager.Play("Jump");
         }
         else if (context.canceled && playerRB.linearVelocity.y > 0)
         {
