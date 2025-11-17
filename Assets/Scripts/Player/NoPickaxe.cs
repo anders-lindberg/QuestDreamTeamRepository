@@ -9,15 +9,16 @@ public class NoPickaxe : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private InputAction move;
     private InputAction jump;
+    public InputActionAsset playerActions;
+    
+    
     public Vector2 horizontalMovement;
     
     [Header("Movement floats")]
     [SerializeField]
     float jumpForce = 5f;
     [SerializeField] float moveSpeed = 3f;
-    [Header("Fall")]
-    public float fallMultiplier = 2f; // multiplier to increase fall speed (1 = normal gravity)
-    [Header("Throw cooldown")]
+    
     
     [Header("Player Component referencer")]
     private Rigidbody2D playerRB;
@@ -27,7 +28,7 @@ public class NoPickaxe : MonoBehaviour
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         move = InputSystem.actions.FindAction("Move");
@@ -43,21 +44,11 @@ public class NoPickaxe : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-       
-        
-        //if (playerRB.linearVelocity.y < 0.1f && !IsGrounded())
-        {
-            // Apply a small downward force to increase fall speed
-           // playerRB.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1f) * Time.deltaTime;
-        }
-        
-        
-    }
+
     void FixedUpdate()
     {
         Move();
+        
         
     }
     

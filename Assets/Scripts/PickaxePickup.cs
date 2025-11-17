@@ -18,10 +18,12 @@ public class PickaxePickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Vector3 spawnPosition = other.transform.position;
-            Quaternion spawnRotation = other.transform.rotation;
+            // If the collider is on a child object, get the parent; otherwise use the collider's transform
+            Transform collectorTransform = other.transform.parent != null ? other.transform.parent : other.transform;
+            Vector3 spawnPosition = collectorTransform.position;
+            Quaternion spawnRotation = collectorTransform.rotation;
 
-            Destroy(other.gameObject); // Destroy the collector
+            Destroy(collectorTransform.gameObject); // Destroy the parent collector
 
             Instantiate(replacementPrefab, spawnPosition, spawnRotation); // Spawn replacement
 

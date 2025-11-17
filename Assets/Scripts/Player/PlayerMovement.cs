@@ -17,8 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float jumpForce = 5f;
     [SerializeField] float moveSpeed = 3f;
-    [Header("Fall")]
-    public float fallMultiplier = 2f; // multiplier to increase fall speed (1 = normal gravity)
+    
     [Header("Throw cooldown")]
     [SerializeField] float throwCooldown = 1f;
     private float throwCooldownTimer = 0f;
@@ -65,11 +64,6 @@ public class PlayerMovement : MonoBehaviour
             throwCooldownTimer = throwCooldown;
         }
         
-        //if (playerRB.linearVelocity.y < 0.1f && !IsGrounded())
-        {
-            // Apply a small downward force to increase fall speed
-           // playerRB.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1f) * Time.deltaTime;
-        }
         
         
     }
