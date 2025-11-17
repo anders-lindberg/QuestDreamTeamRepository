@@ -131,6 +131,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1825509389045214757, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22.447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825509389045214757, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 22.447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825509389045214757, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 22.447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825509389045214757, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 2203952273088559953, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.63
@@ -171,7 +187,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3475962300168042060, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475962300168042060, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 46.556686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475962300168042060, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475962300168042060, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.21981
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475962300168042060, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913020386061796239, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7675142372546826042, guid: 3ee3d9a42654ec143b6b8e82be583e8e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
