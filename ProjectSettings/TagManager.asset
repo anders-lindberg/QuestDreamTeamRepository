@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Hazard
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundCheckLayer
   - Water
   - UI
-  - GroundCheckLayer
+  - 
   - 
   - 
   - 
