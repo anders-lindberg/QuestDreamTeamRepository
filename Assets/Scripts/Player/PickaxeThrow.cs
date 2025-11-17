@@ -15,6 +15,7 @@ public class PickaxeThrow : MonoBehaviour
     public float increasedGravityScale = 3f;
     [Tooltip("Time (seconds) before gravity increases")]
     public float gravityIncreaseDelay = 1f;
+    public Transform PlayerTransform;
 
     private Rigidbody2D rb;
     private float originalGravityScale;
@@ -29,9 +30,6 @@ public class PickaxeThrow : MonoBehaviour
         originalGravityScale = rb.gravityScale;
         rb.gravityScale = initialGravityScale;
 
-        // Launch immediately
-        LaunchAtAngle(launchAngle, speed);
-
         // Start the gravity increase coroutine
         StartCoroutine(IncreaseGravityAfterDelay(gravityIncreaseDelay));
     }
@@ -41,11 +39,13 @@ public class PickaxeThrow : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
             Destroy(gameObject); 
     
-    }  
+    }
+
+    void Update()
+    {
         
-           
-        
-    
+    }
+
     /// <summary>
     /// Increases gravity scale after a specified delay.
     /// </summary>
@@ -66,12 +66,24 @@ public class PickaxeThrow : MonoBehaviour
 
     public void LaunchAtAngle(float angleDegrees, float speed)
     {
+        LaunchWithDirection(angleDegrees, speed, 1f); // default: launch to the right
+    }
+
+    /// <summary>
+    /// Launch at an angle with a direction multiplier. Use directionMultiplier = -1 for left, 1 for right.
+    /// </summary>
+    public void LaunchWithDirection(float angleDegrees, float speed, float directionMultiplier = 1f)
+    {
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
 
-        Vector2 forward = transform.right;
-        Vector2 launchDir = Quaternion.Euler(0f, 0f, angleDegrees) * forward;
+        // Flip the angle if throwing left
+        float effectiveAngle = angleDegrees * directionMultiplier;
+        Vector2 forward = transform.right * directionMultiplier;
+        Vector2 launchDir = Quaternion.Euler(0f, 0f, effectiveAngle) * forward;
 
         rb.linearVelocity = launchDir.normalized * speed;
     }
+
+
 }
