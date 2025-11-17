@@ -204,7 +204,7 @@ MonoBehaviour:
   moveSpeed: 3
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   groundCheck: {fileID: 1055218268291955373}
 --- !u!61 &5493852119756052513
 BoxCollider2D:
