@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="hud" style="flex-grow: 1;">
+        <ui:VisualElement name="inventory" style="flex-grow: 1; position: absolute; bottom: auto; flex-direction: row-reverse; padding-right: 20px; padding-bottom: 20px; width: 100%; height: auto; flex-shrink: 1; left: auto; align-items: stretch; -unity-text-align: upper-left;">
+            <ui:VisualElement name="keyIcon" style="flex-grow: 0; width: 54px; height: 40px; flex-direction: row; -unity-background-scale-mode: scale-to-fit; background-image: resource(&apos;NoKey&apos;); align-items: stretch; justify-content: space-between; align-self: center; -unity-text-align: upper-left; position: absolute; left: 0; top: 5px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
