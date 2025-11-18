@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerHealthManager : MonoBehaviour
 {
     public static PlayerHealthManager Instance;
+    [Header("Ikke rør ved maxHP og currentHp")]
     public int maxHp = 5;
     public int currentHp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
