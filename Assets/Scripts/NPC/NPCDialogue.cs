@@ -7,10 +7,13 @@ public class NPCDialogue : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
-    public string[] lines;
+    public string[] firstTimelines;
+    public string[] repeatLines;
+
     public float lineDelay;
 
     private bool playerInRange = false;
+    private bool hasTalked = false;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,11 +37,13 @@ public class NPCDialogue : MonoBehaviour
     private IEnumerator StartDialogue()
     {
         dialoguePanel.SetActive(true);
-        foreach (string line in lines)
+        string[] currentLines = hasTalked ? repeatLines : firstTimelines;
+        foreach (string line in currentLines)
         {
             dialogueText.text = line;
             yield return new WaitForSeconds(lineDelay);
         }
         dialoguePanel.SetActive(false);
+        hasTalked = true;
     }  
 }
