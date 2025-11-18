@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 5984298778215807803}
   - component: {fileID: 8660470314120947812}
   - component: {fileID: 2577596323721462739}
-  - component: {fileID: 4177434753436148401}
+  - component: {fileID: 8943538448373127091}
   m_Layer: 0
   m_Name: PlayerNoPickaxe
   m_TagString: Untagged
@@ -286,7 +286,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 308347534573952129}
---- !u!114 &4177434753436148401
+--- !u!114 &8943538448373127091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +295,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7095853470656912638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 123f33fd601f4ef449e4c063af8fe203, type: 3}
+  m_Script: {fileID: 11500000, guid: a0fd5990a875e0b4f98199d06f62f710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDead: 0
