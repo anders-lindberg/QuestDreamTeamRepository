@@ -7,6 +7,9 @@ TagManager:
   - Pickaxe
   - Enemy
   - Ground
+  - PlatformBarrier
+  - BarrierLeft
+  - BarrierRight
   layers:
   - Default
   - TransparentFX
