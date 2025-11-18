@@ -14,7 +14,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(int amount)
     {
-        currentHp -= amount;//currentHp = currentHp - amount(den mængde skade jeg lige modtog)
+        PlayerHealthManager.Instance.ApplyDamage(amount);
+        /*currentHp -= amount;//currentHp = currentHp - amount(den mængde skade jeg lige modtog)
         if (currentHp < 0)
         {
             currentHp = 0;
@@ -25,6 +26,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             gameObject.SetActive(false);
             isDead = true;
 
-        }
+        }*/
     }
 }
