@@ -911,26 +911,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1466744322327450550, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: m_Size.y
-      value: 1.0025024
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466744322327450550, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0012512207
-      objectReference: {fileID: 0}
-    - target: {fileID: 2739132107421774303, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2739132107421774303, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: moveSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2739132107421774303, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2853203862980527508, guid: d3483852a349a6843ac921972be56c43, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.1
@@ -975,25 +955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7084913327783056473, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: m_Mass
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084913327783056473, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: m_GravityScale
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579440109602724948, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6746926836540228081, guid: d3483852a349a6843ac921972be56c43, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 858688328}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3483852a349a6843ac921972be56c43, type: 3}
 --- !u!4 &657598438 stripped
 Transform:
@@ -1339,24 +1304,17 @@ Transform:
   - {fileID: 1209844683}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &858688323 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6746926836540228081, guid: d3483852a349a6843ac921972be56c43, type: 3}
+--- !u!114 &858688328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5410024119679897902, guid: d3483852a349a6843ac921972be56c43, type: 3}
   m_PrefabInstance: {fileID: 656257582}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &858688328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858688323}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 123f33fd601f4ef449e4c063af8fe203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDead: 0
 --- !u!1001 &947000428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3501,14 +3459,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 598423584938867127, guid: a268067324303384faa3d7ab39f049b5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.864702
-      objectReference: {fileID: 0}
-    - target: {fileID: 598423584938867127, guid: a268067324303384faa3d7ab39f049b5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.8801
-      objectReference: {fileID: 0}
     - target: {fileID: 1322772656018340825, guid: a268067324303384faa3d7ab39f049b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.235298
@@ -3553,14 +3503,6 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 657598438}
-    - target: {fileID: 6827686609997964528, guid: a268067324303384faa3d7ab39f049b5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.864702
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827686609997964528, guid: a268067324303384faa3d7ab39f049b5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.8801
-      objectReference: {fileID: 0}
     - target: {fileID: 8269214164313255134, guid: a268067324303384faa3d7ab39f049b5, type: 3}
       propertyPath: m_Name
       value: RealCamera

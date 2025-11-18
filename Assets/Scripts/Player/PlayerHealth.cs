@@ -15,6 +15,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         currentHp -= amount;//currentHp = currentHp - amount(den mængde skade jeg lige modtog)
+        if (currentHp < 0)
+        {
+            currentHp = 0;
+        }
         Debug.Log("player took damage, HP is now" + currentHp);
         if(currentHp <= 0)
         {
