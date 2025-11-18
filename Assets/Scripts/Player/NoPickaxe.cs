@@ -4,13 +4,14 @@ using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class NoPickaxe : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private InputAction move;
     private InputAction jump;
-    private InputAction throwPickaxe;
-    public GameObject pickaxePrefab;
+    public InputActionAsset playerActions;
+    
+    
     public Vector2 horizontalMovement;
     
     [Header("Movement floats")]
@@ -18,9 +19,7 @@ public class PlayerMovement : MonoBehaviour
     float jumpForce = 5f;
     [SerializeField] float moveSpeed = 3f;
     
-    [Header("Throw cooldown")]
-    [SerializeField] float throwCooldown = 1f;
-    private float throwCooldownTimer = 0f;
+    
     [Header("Player Component referencer")]
     private Rigidbody2D playerRB;
     [Header("Grounding")]
@@ -29,47 +28,27 @@ public class PlayerMovement : MonoBehaviour
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
-        throwPickaxe = InputSystem.actions.FindAction("Attack");
+        
         playerRB = GetComponent<Rigidbody2D>();
         move.Enable();
         jump.Enable();
-        throwPickaxe.Enable();
+        
         jump.performed += Jump;
         jump.canceled += Jump;
     
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        // Update throw cooldown timer
-        if (throwCooldownTimer > 0f)
-            throwCooldownTimer -= Time.deltaTime;
 
-        if (throwPickaxe.WasPressedThisFrame() && throwCooldownTimer <= 0f)
-        {
-            var pickaxeObj = Instantiate(pickaxePrefab, transform.position, Quaternion.identity);
-            // Launch pickaxe in the direction player sprite is facing
-            var throwScript = pickaxeObj.GetComponent<PickaxeThrow>();
-            if (throwScript != null)
-            {
-                float directionMultiplier = spriteRenderer.flipX ? -1f : 1f; // -1 for left, 1 for right
-                throwScript.LaunchWithDirection(throwScript.launchAngle, throwScript.speed, directionMultiplier);
-            }
-            throwCooldownTimer = throwCooldown;
-        }
-        
-        
-        
-    }
     void FixedUpdate()
     {
         Move();
+        
         
     }
     
