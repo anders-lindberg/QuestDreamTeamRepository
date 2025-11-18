@@ -215,7 +215,7 @@ MonoBehaviour:
   throwCooldown: 1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   groundCheck: {fileID: 5346386903725282625}
 --- !u!1 &6805903226916778643
 GameObject:

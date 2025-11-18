@@ -283,5 +283,5 @@ MonoBehaviour:
   moveSpeed: 7
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   groundCheck: {fileID: 308347534573952129}
