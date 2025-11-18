@@ -1,10 +1,12 @@
 using UnityEngine;
 using TMPro;
+using System;
 using System.Collections;
 
 public class NPCDialogue : MonoBehaviour
 
 {
+    public event Action OnFirstDialogueComplete;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
     public GameObject interactIcon;
@@ -104,6 +106,10 @@ public class NPCDialogue : MonoBehaviour
         if (currentIndex >= currentLines.Length)
         {
             EndDialogue();
+            if (!hasTalked)
+            {
+                OnFirstDialogueComplete?.Invoke();
+            }
             hasTalked = true;
             return;
         }
