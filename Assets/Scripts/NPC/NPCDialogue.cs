@@ -3,17 +3,18 @@ using TMPro;
 using System.Collections;
 
 public class NPCDialogue : MonoBehaviour
+
 {
-    public GameObject dialogueBox;
+    public GameObject dialoguePanel;
     public TMP_Text dialogueText;
     public string[] lines;
-    public float lineDelay = 2f;
+    public float lineDelay;
 
     private bool playerInRange = false;
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !playerInRange)
         {
             playerInRange = true;
             StartCoroutine(StartDialogue());
@@ -26,19 +27,18 @@ public class NPCDialogue : MonoBehaviour
         {
             playerInRange = false;
             StopAllCoroutines();
-            dialogueBox.SetActive(false);
+            dialoguePanel.SetActive(false);
         }
     }
 
     private IEnumerator StartDialogue()
     {
-        dialogueBox.SetActive(true);
+        dialoguePanel.SetActive(true);
         foreach (string line in lines)
         {
             dialogueText.text = line;
             yield return new WaitForSeconds(lineDelay);
         }
-        dialogueBox.SetActive(false);
-    
-    }
+        dialoguePanel.SetActive(false);
+    }  
 }
