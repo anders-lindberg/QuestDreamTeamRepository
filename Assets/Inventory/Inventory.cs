@@ -14,9 +14,9 @@ public class Inventory : MonoBehaviour
         noKey = new StyleBackground(Resources.Load<Texture2D>("NoKey"));
         yesKey = new StyleBackground(Resources.Load<Texture2D>("YesKey"));
 
-        VisualElement root = miniInventoryUI.rootVisualElement;
-        inventory = root.Q<VisualElement>("Inventory");
-        keyIcon = root.Q<VisualElement>("KeyIcon");
+        VisualElement root = miniInventoryUI.GetComponent<UIDocument>().rootVisualElement;
+        VisualElement inventory = root.Q<VisualElement>("inventory");
+        keyIcon = inventory.Q<VisualElement>("keyIcon");
         keyIcon.style.backgroundImage = noKey;
     }
     private void OnTriggerEnter2D(Collider2D collision)
