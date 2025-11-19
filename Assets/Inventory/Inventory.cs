@@ -19,6 +19,16 @@ public class Inventory : MonoBehaviour
         keyIcon = root.Q<VisualElement>("KeyIcon");
         keyIcon.style.backgroundImage = noKey;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Key"))
+        {
+            keyIcon.style.backgroundImage = yesKey;
+            hasKey = true;
+            collision.gameObject.SetActive(false);
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
