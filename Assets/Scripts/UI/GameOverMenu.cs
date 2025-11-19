@@ -19,7 +19,7 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(healthManager.playerIsDead == true)
+        if(healthManager.playerIsDead != false)
         {
             DisplayGameOverMenu();
         }
