@@ -61,6 +61,7 @@ public class GateController : MonoBehaviour
         anim.SetTrigger("Open");            //min lille animation
         gateCollider.enabled = false;       // Lågen forsvinder
         interactIcon.SetActive(false);      // Fjern E-ikonet
+        gateUnlocked = false;          // Forhindrer gentagen åbning :D
         Debug.Log("Lågen er åben!");
     }
 }
