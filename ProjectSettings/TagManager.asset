@@ -3,15 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Pickaxe
+  - Enemy
+  - Ground
+  - PlatformBarrier
+  - BarrierLeft
+  - BarrierRight
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundCheckLayer
   - Water
   - UI
-  - GroundCheckLayer
+  - 
   - 
   - 
   - 
