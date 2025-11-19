@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Pickaxe
   - Enemy
-  - Hazard
+  - Ground
+  - PlatformBarrier
+  - BarrierLeft
+  - BarrierRight
   layers:
   - Default
   - TransparentFX
