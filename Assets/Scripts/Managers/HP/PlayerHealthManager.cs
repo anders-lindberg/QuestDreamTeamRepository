@@ -6,6 +6,10 @@ public class PlayerHealthManager : MonoBehaviour
     [Header("Ikke rør ved maxHP og currentHp")]
     public int maxHp = 5;
     public int currentHp;
+
+    public bool playerIsDead = false;
+
+    [SerializeField] private GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -26,6 +30,8 @@ public class PlayerHealthManager : MonoBehaviour
         if(currentHp <= 0)
         {
             currentHp = 0;
+            playerIsDead = true;
+            player.SetActive(false);
             Debug.Log("player has died");
         }
     }

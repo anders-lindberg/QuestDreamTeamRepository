@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class DestroyOnCollision : MonoBehaviour
+public class DestroyOnCollision : HurtBoxClass
 {
-    [SerializeField] private PlayerHealth player;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Awake()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            player.TakeDamage(100);
-        }
+        damageAmount = 100;
+    }
+    private void Start()
+    {
+        
     }
 }

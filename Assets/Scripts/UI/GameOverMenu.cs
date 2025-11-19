@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class GameOverMenu : MonoBehaviour
 {
-    [SerializeField] private PlayerHealth player;
+    [SerializeField] private PlayerHealthManager healthManager;
 
     private Button retryButton;
 
@@ -19,7 +19,7 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.isDead == true)
+        if(healthManager.playerIsDead == true)
         {
             DisplayGameOverMenu();
         }
