@@ -46,6 +46,16 @@ public class EnemyTypeBasic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Collider2D otherCollider = collision.collider;
+            Collider2D thisCollider = GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(thisCollider, otherCollider);
+        
+        }
     }
     
-}
+    }
+
+    
+
