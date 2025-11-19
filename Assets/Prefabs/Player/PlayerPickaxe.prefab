@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4026473585271903337}
   - component: {fileID: 3856835808121152907}
   - component: {fileID: 2054234776038168320}
+  - component: {fileID: 287030356870729273}
   m_Layer: 0
   m_Name: PlayerPickaxe
   m_TagString: Untagged
@@ -217,6 +218,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 5346386903725282625}
+--- !u!114 &287030356870729273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077533762147841791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fd5990a875e0b4f98199d06f62f710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6805903226916778643
 GameObject:
   m_ObjectHideFlags: 0
