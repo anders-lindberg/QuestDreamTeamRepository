@@ -140,7 +140,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 487780588956296721, guid: 463d1c25beedcf3468e1875ba6fc21a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.132403
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 487780588956296721, guid: 463d1c25beedcf3468e1875ba6fc21a2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -510,6 +510,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1319944149350339305, guid: 5ff5de6b9f17f3c4ea83af0f47045bfd, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672004287234328075, guid: 5ff5de6b9f17f3c4ea83af0f47045bfd, type: 3}
+      propertyPath: HurtBox
+      value: 
+      objectReference: {fileID: 3332469238523175063, guid: 268129fac749ee64d9ce405c23a1904e, type: 3}
     - target: {fileID: 5299677822373369939, guid: 5ff5de6b9f17f3c4ea83af0f47045bfd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5293002
