@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="hud" style="flex-grow: 1; position: absolute; height: 448px; width: 483px;">
+        <ui:VisualElement name="inventory" style="flex-grow: 1; position: absolute; height: 124px; width: 484px;">
+            <ui:VisualElement name="empty1" style="flex-grow: 0; position: absolute; height: 30px; width: 32px; background-image: url(&quot;project://database/Assets/UI/Resources/empty.png?fileID=2800000&amp;guid=32bc69f27e48f3840b9d14011a3edc88&amp;type=3#empty&quot;); top: 10px; left: 10px; -unity-background-scale-mode: scale-to-fit; flex-shrink: 0;" />
+            <ui:VisualElement name="empty2" style="flex-grow: 0; position: absolute; height: 30px; width: 32px; background-image: url(&quot;project://database/Assets/UI/Resources/empty.png?fileID=2800000&amp;guid=32bc69f27e48f3840b9d14011a3edc88&amp;type=3#empty&quot;); top: 10px; left: 50px; -unity-background-scale-mode: scale-to-fit; flex-shrink: 0;" />
+            <ui:VisualElement name="empty3" style="flex-grow: 0; position: absolute; height: 30px; width: 32px; background-image: url(&quot;project://database/Assets/UI/Resources/empty.png?fileID=2800000&amp;guid=32bc69f27e48f3840b9d14011a3edc88&amp;type=3#empty&quot;); top: 10px; left: 90px; -unity-background-scale-mode: scale-to-fit; flex-shrink: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
