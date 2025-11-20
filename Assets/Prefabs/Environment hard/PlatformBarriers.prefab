@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 1818865857618615284}
   - component: {fileID: 770827229164439033}
   m_Layer: 6
-  m_Name: GroundWithBarriers
+  m_Name: PlatformBarriers
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5773585, g: 0.19063717, b: 0.5326072, a: 1}
+  m_Color: {r: 0.33333334, g: 0.62352943, b: 0.31764707, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
