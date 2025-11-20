@@ -10,6 +10,11 @@ TagManager:
   - PlatformBarrier
   - BarrierLeft
   - BarrierRight
+  - Hazard
+  - item1
+  - item2
+  - item3
+  - ItemZone
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - GroundCheckLayer
   - Water
   - UI
-  - 
+  - ItemCheckLayer
   - 
   - 
   - 
