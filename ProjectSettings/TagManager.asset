@@ -10,6 +10,7 @@ TagManager:
   - PlatformBarrier
   - BarrierLeft
   - BarrierRight
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - GroundCheckLayer
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
