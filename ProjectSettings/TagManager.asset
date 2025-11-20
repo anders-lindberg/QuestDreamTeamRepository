@@ -11,10 +11,6 @@ TagManager:
   - BarrierLeft
   - BarrierRight
   - Hazard
-  - item1
-  - item2
-  - item3
-  - ItemZone
   layers:
   - Default
   - TransparentFX
@@ -22,7 +18,7 @@ TagManager:
   - GroundCheckLayer
   - Water
   - UI
-  - ItemCheckLayer
+  - Player
   - 
   - 
   - 
@@ -60,9 +56,6 @@ TagManager:
     locked: 0
   - name: forgrund
     uniqueID: 517089725
-    locked: 0
-  - name: Mere forgrund
-    uniqueID: 144128785
     locked: 0
   m_RenderingLayers:
   - Default
