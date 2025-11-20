@@ -66,7 +66,7 @@ public class NoPickaxe : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if(playerRB != null && transform != null)
+        if(playerRB != null && transform != null && this != null)
         {
             if (context.performed && IsGrounded())
             {
