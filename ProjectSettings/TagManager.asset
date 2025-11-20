@@ -56,5 +56,8 @@ TagManager:
   - name: forgrund
     uniqueID: 517089725
     locked: 0
+  - name: Mere forgrund
+    uniqueID: 144128785
+    locked: 0
   m_RenderingLayers:
   - Default
