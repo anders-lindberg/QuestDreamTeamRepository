@@ -99,7 +99,7 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 7bfaad1a12e9b16429410af51b5563f8, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: d3513120357b84d4da6017791d293022, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66f502ef34e99c4d88062910467464b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 0}
+  healthManager: {fileID: 8097293303576645060, guid: 63e5a9dee1c7ac747b70dd90525d1791, type: 3}
 --- !u!1 &8678548331726029779
 GameObject:
   m_ObjectHideFlags: 0
