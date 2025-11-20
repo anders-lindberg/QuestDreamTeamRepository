@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEditor.SceneManagement;
 public class PlaceItem : MonoBehaviour
 {
+    
     InputAction placeItem;
     public UIDocument InventoryUI;
     StyleBackground Empty;
@@ -17,6 +18,12 @@ public class PlaceItem : MonoBehaviour
     public GameObject item1Prefab;
     public GameObject item2Prefab; 
     public GameObject item3Prefab;
+    bool initemzone = false;
+    
+    // Track active item instances to prevent multiple spawns
+    private GameObject activeItem1Instance;
+    private bool item1Placed = false;
+    
     void OnEnable()
     {
         Empty = new StyleBackground(Resources.Load<Texture2D>("empty"));
@@ -41,14 +48,37 @@ public class PlaceItem : MonoBehaviour
         
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("ItemZone"))
+        {
+            initemzone = true;
+        }
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {
-        if (placeItem.triggered)
+        if (placeItem.triggered && initemzone && !item1Placed)
         {
             empty1.style.backgroundImage = Empty;
-            Instantiate(item1Prefab, new Vector3(transform.position.x+3, transform.position.y, transform.position.z), Quaternion.identity);
-        
+            activeItem1Instance = Instantiate(item1Prefab, new Vector3(transform.position.x+3, transform.position.y, transform.position.z), Quaternion.identity);
+            item1Placed = true;
+            Debug.Log("Item1 placed. Flag set to prevent duplicate spawns.");
         }
     }
+    
+    /// <summary>
+    /// Call this when item1 is picked up to reset the placement flag.
+    /// </summary>
+    public void OnItem1PickedUp()
+    {
+        activeItem1Instance = null;
+        item1Placed = false;
+        Debug.Log("Item1 picked up. Can place again.");
+    }
+    
+
 }
