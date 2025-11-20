@@ -12,6 +12,9 @@ TagManager:
   - BarrierRight
   - Hazard
   - Pit
+  - item2
+  - item3
+  - item1
   layers:
   - Default
   - TransparentFX
@@ -57,6 +60,9 @@ TagManager:
     locked: 0
   - name: forgrund
     uniqueID: 517089725
+    locked: 0
+  - name: forgrundforgrund
+    uniqueID: 3167654935
     locked: 0
   m_RenderingLayers:
   - Default

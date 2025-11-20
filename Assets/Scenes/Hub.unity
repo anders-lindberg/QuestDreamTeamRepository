@@ -1244,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad49e34e80d1c0944a974e8b3c7cce10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderToTrigger: {fileID: 0}
   colliderToEnable: {fileID: 550497542}
   playerTag: Player
 --- !u!4 &550497545
@@ -4122,7 +4123,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 144128785
+  m_SortingLayerID: -1127312361
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
