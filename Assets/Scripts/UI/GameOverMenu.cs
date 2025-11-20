@@ -19,8 +19,9 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(healthManager.playerIsDead != false)
+        if(healthManager.playerIsDead == true)
         {
+            Debug.Log("Display death screen");
             DisplayGameOverMenu();
         }
     }
@@ -47,5 +48,7 @@ public class GameOverMenu : MonoBehaviour
     void OnRetryClicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        healthManager.playerIsDead = false;
+        healthManager.currentHp = healthManager.maxHp;
     }
 }
