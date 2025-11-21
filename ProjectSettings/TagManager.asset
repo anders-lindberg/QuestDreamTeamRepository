@@ -12,6 +12,10 @@ TagManager:
   - BarrierRight
   - Hazard
   - PlayerPickaxe
+  - item1
+  - item2
+  - item3
+  - PowerUp
   layers:
   - Default
   - TransparentFX

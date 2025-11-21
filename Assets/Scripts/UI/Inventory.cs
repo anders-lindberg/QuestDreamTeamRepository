@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     VisualElement empty1;
     VisualElement empty2;
     VisualElement empty3;
+    Collider2D col;
 
     void OnEnable()
     {
@@ -26,6 +27,7 @@ public class Inventory : MonoBehaviour
         empty1 = inventory.Q<VisualElement>("empty1");
         empty2 = inventory.Q<VisualElement>("empty2");
         empty3 = inventory.Q<VisualElement>("empty3");
+        col = GetComponent<Collider2D>();
 
         
     }
