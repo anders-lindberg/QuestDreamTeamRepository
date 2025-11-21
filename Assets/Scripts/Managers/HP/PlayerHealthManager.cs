@@ -32,6 +32,5 @@ public class PlayerHealthManager : MonoBehaviour
     public void Heal(int amount)
     {
         currentHp = Mathf.Min(currentHp + amount, maxHp);
-        Debug.Log($"player has healed, hp is now {currentHp}");
     }
 }

@@ -10,7 +10,6 @@ TagManager:
   - PlatformBarrier
   - BarrierLeft
   - BarrierRight
-  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - GroundCheckLayer
   - Water
   - UI
-  - Player
+  - 
   - 
   - 
   - 
@@ -47,18 +46,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: bccolor
-    uniqueID: 2477150545
-    locked: 0
-  - name: bgc
-    uniqueID: 2428632745
-    locked: 0
-  - name: bgb
-    uniqueID: 402203785
-    locked: 0
-  - name: bga
-    uniqueID: 246299155
     locked: 0
   - name: background
     uniqueID: 1558336291

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 5.84, y: 4.82, z: 0}
-  m_LocalScale: {x: 1.33, y: 1.3076279, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7169045742733863095}
@@ -77,10 +77,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -621124143
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1965011998, guid: 84bcc6212c8aa184ab4e88a721dbf278, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,17 +125,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.095733166, y: 0.049621217}
+  m_Offset: {x: 0, y: 0.14356303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.28866667}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.84292436, y: 0.44241118}
+  m_Size: {x: 1, y: 0.25452757}
   m_EdgeRadius: 0
 --- !u!114 &9004265230809388116
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtBoxPrefab: {fileID: 7209104293922541972, guid: c94bcea72d4ec5645a29375c73d54ec2, type: 3}
-  breakVFX: {fileID: 7601499253189835549, guid: 33b01e60fb10d70479f21f64d07a8f7f, type: 3}
+  breakVFX: {fileID: 0}
 --- !u!50 &6722575324195777786
 Rigidbody2D:
   serializedVersion: 5
@@ -244,7 +244,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.21998632, y: -3.524438}
+  m_Offset: {x: 0.101655245, y: -4.4558916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -254,5 +254,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5920665, y: 8.048874}
+  m_Size: {x: 2.3554044, y: 9.911783}
   m_EdgeRadius: 0

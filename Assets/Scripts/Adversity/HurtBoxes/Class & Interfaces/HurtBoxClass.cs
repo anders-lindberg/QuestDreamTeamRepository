@@ -12,7 +12,7 @@ public class HurtBoxClass : MonoBehaviour
     {
         Destroy(gameObject, lifeSpan);
     }
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         GameObject targetRoot = other.transform.root.gameObject;
         if (alreadyHit.Contains(targetRoot))

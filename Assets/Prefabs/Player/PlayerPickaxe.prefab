@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3500568477362782014}
   - component: {fileID: 5327613285029154449}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlayerCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 3856835808121152907}
   - component: {fileID: 2054234776038168320}
   - component: {fileID: 287030356870729273}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlayerPickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5346386903725282625}
   - component: {fileID: 4722460896886236194}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
