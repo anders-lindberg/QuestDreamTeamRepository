@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835f769c3a62b814bab7875dfe572bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   minWaitTime: 0.2
   maxWaitTime: 0.6
   batPoint1: {fileID: 0}
