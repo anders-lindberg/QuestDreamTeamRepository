@@ -10,6 +10,7 @@ TagManager:
   - PlatformBarrier
   - BarrierLeft
   - BarrierRight
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bgcolor
+    uniqueID: 2484534681
+    locked: 0
+  - name: bgc
+    uniqueID: 3155369787
+    locked: 0
+  - name: bgb
+    uniqueID: 2757129313
+    locked: 0
+  - name: bga
+    uniqueID: 4064416691
     locked: 0
   - name: background
     uniqueID: 1558336291
