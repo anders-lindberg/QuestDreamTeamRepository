@@ -160,6 +160,8 @@ GameObject:
   - component: {fileID: 8660470314120947812}
   - component: {fileID: 2577596323721462739}
   - component: {fileID: 8943538448373127091}
+  - component: {fileID: -2428672793865263468}
+  - component: {fileID: 7585863850472595236}
   m_Layer: 0
   m_Name: PlayerNoPickaxe
   m_TagString: Player
@@ -298,3 +300,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fd5990a875e0b4f98199d06f62f710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2428672793865263468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095853470656912638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1cfbd0e7739494ba79f3caa7e7e508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryUI: {fileID: 7190246998333836337, guid: 53b1e15354fd13a4f8192d9703d0718c, type: 3}
+--- !u!114 &7585863850472595236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095853470656912638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057fa74233c8a6545b338ac7f0fb1c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 0}

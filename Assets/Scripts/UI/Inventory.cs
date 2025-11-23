@@ -39,18 +39,21 @@ public class Inventory : MonoBehaviour
             empty1.style.backgroundImage = Item1;
             SoundEffectManager.Play("ItemCollect", true);
             Destroy(other.gameObject);
+            return;
         }
         if (other.gameObject.CompareTag("item2"))
         {
             empty2.style.backgroundImage = Item2;
             SoundEffectManager.Play("ItemCollect", true);
             Destroy(other.gameObject);
+            return;
         }
         if (other.gameObject.CompareTag("item3"))
         {
             empty3.style.backgroundImage = Item3;
             SoundEffectManager.Play("ItemCollect", true);
             Destroy(other.gameObject);
+            return;
         }
     }
 
