@@ -1383,7 +1383,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1cfbd0e7739494ba79f3caa7e7e508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryUI: {fileID: 0}
+  InventoryUI: {fileID: 665167785}
+--- !u!114 &894749226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894749220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186e591f5e386e94a8ec083f41202836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 1617703709}
 --- !u!1001 &910906075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1822,6 +1835,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6077533762147841791, guid: 9757e63542a457446be308967c8564cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 894749225}
+    - targetCorrespondingSourceObject: {fileID: 6077533762147841791, guid: 9757e63542a457446be308967c8564cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 894749226}
   m_SourcePrefab: {fileID: 100100000, guid: 9757e63542a457446be308967c8564cd, type: 3}
 --- !u!1001 &1295528809
 PrefabInstance:
@@ -2204,8 +2220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057fa74233c8a6545b338ac7f0fb1c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 1617703709}
-  newTarget: {fileID: 0}
 --- !u!4 &1630172557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 684410117504193422, guid: ad98acd242958224eabd9379cad5b2c7, type: 3}
