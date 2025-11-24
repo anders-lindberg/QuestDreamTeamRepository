@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BatEnemy : MonoBehaviour
 {
+    public GameObject HurtBox;
     [Header("Movement")]
     public float speed = 2f;
     
@@ -75,5 +76,21 @@ public class BatEnemy : MonoBehaviour
         waitTimer = currentWaitDuration;
         isWaiting = true;
         Debug.Log($"Bat arrived at waypoint {currentWaypointIndex + 1}. Waiting for {currentWaitDuration:F2} seconds.");
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Log for debugging
+        if (collision.gameObject.CompareTag("Pickaxe"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Collider2D otherCollider = collision.collider;
+            Collider2D thisCollider = GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(thisCollider, otherCollider);
+            Instantiate(HurtBox, transform.position, Quaternion.identity);
+        }
+
     }
 }
