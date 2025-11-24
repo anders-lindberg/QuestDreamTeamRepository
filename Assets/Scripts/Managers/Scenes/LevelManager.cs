@@ -25,6 +25,8 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        fadeDocument = GameObject.FindGameObjectWithTag("UI").GetComponent<UIDocument>();
     }
 
     /*Start*/
@@ -63,6 +65,12 @@ public class LevelManager : MonoBehaviour
     /*Starts the load-scene proces*/
     public void StartLoadScene(string sceneName)
     {
+        if (fadeDocument == null)
+        {
+            fadeDocument = GameObject.FindGameObjectWithTag("UI").GetComponent<UIDocument>();
+            fadeOverlay = fadeDocument.rootVisualElement.Q<VisualElement>("FadeOverlay");
+        }
+
         StartCoroutine(LoadScene(sceneName));
     }
 

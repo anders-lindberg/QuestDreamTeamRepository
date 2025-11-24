@@ -15,6 +15,7 @@ TagManager:
   - item2
   - item3
   - item1
+  - UI
   layers:
   - Default
   - TransparentFX
