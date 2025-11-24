@@ -15,6 +15,11 @@ TagManager:
   - item2
   - item3
   - item1
+  - PlayerPickaxe
+  - item1
+  - item2
+  - item3
+  - PowerUp
   layers:
   - Default
   - TransparentFX

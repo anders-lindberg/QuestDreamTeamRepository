@@ -91,9 +91,15 @@ GameObject:
   - component: {fileID: 3856835808121152907}
   - component: {fileID: 2054234776038168320}
   - component: {fileID: 287030356870729273}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  - component: {fileID: 3096764965377305245}
+  - component: {fileID: -51508710462366959}
+  m_Layer: 6
+>>>>>>> ChristianLevel2
   m_Name: PlayerPickaxe
-  m_TagString: Untagged
+  m_TagString: PlayerPickaxe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,6 +236,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fd5990a875e0b4f98199d06f62f710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3096764965377305245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077533762147841791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1cfbd0e7739494ba79f3caa7e7e508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryUI: {fileID: 7190246998333836337, guid: 53b1e15354fd13a4f8192d9703d0718c, type: 3}
+--- !u!114 &-51508710462366959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077533762147841791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057fa74233c8a6545b338ac7f0fb1c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 0}
 --- !u!1 &6805903226916778643
 GameObject:
   m_ObjectHideFlags: 0
