@@ -9,16 +9,30 @@ public class HealthItem : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             PlayerHealthManager.Instance.Heal(2);
-        }
-        if(destroyVFX != null)
+            if(destroyVFX != null)
         {
             Instantiate(destroyVFX, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        }
+        
     }
 }
+    /*public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
+        }
+    }
+}*/

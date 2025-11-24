@@ -11,6 +11,9 @@ public class BossMoveScript : MonoBehaviour
     [SerializeField] GameObject rockThrow;
     [SerializeField] GameObject HealthGem;
     int hpspawnNumber;
+    Transform spawnPoint;
+    int playerHp;
+    bool gemSpawned = false;
     float timer = 0f;
     [SerializeField] float attackSpeed = 2f;
 
@@ -18,11 +21,23 @@ public class BossMoveScript : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spawnPoint = transform.Find("gemspawnpoint");
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerHp = PlayerHealthManager.Instance.currentHp;
+        if(playerHp == 1 && HealthGem != null && !gemSpawned)
+        {
+            Instantiate(HealthGem, spawnPoint.position, Quaternion.identity);
+
+            gemSpawned = true;
+        }
+        if(playerHp >= 2)
+        {
+            gemSpawned = false;
+        }
         if(timer < attackSpeed)
         {
             timer = timer + Time.deltaTime;
