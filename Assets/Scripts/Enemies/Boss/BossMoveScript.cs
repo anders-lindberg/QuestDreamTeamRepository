@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Mathematics;
 
 public class BossMoveScript : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class BossMoveScript : MonoBehaviour
     private int currentIndex = 0;
     [SerializeField] private float bossMoveSpeed = 2f;
     SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject rockThrow;
+    [SerializeField] GameObject HealthGem;
+    int hpspawnNumber;
+    float timer = 0f;
+    [SerializeField] float attackSpeed = 2f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +23,16 @@ public class BossMoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(timer < attackSpeed)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        else
+        {
+            Instantiate(rockThrow, transform.position, Quaternion.identity);
+            timer = 0f;
+        }
+        
         Vector2 movepointPosition = movePoints[currentIndex].transform.position - transform.position;
 
         if ( movePoints != null)
