@@ -32,10 +32,10 @@ public class NoPickaxe : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void OnEnable()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
         
