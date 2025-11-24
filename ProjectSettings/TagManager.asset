@@ -11,6 +11,11 @@ TagManager:
   - BarrierLeft
   - BarrierRight
   - Hazard
+  - Pit
+  - item2
+  - item3
+  - item1
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -46,16 +51,16 @@ TagManager:
   - 
   m_SortingLayers:
   - name: bgcolor
-    uniqueID: 2484534681
+    uniqueID: 768956893
     locked: 0
   - name: bgc
-    uniqueID: 3155369787
+    uniqueID: 1475285957
     locked: 0
   - name: bgb
-    uniqueID: 2757129313
+    uniqueID: 2891777863
     locked: 0
   - name: bga
-    uniqueID: 4064416691
+    uniqueID: 1364953329
     locked: 0
   - name: Default
     uniqueID: 0
@@ -68,6 +73,9 @@ TagManager:
     locked: 0
   - name: forgrund
     uniqueID: 517089725
+    locked: 0
+  - name: forgrundforgrund
+    uniqueID: 3167654935
     locked: 0
   m_RenderingLayers:
   - Default

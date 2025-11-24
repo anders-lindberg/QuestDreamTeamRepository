@@ -10,6 +10,7 @@ public class NoPickaxe : MonoBehaviour
     private InputAction move;
     private InputAction jump;
     public InputActionAsset playerActions;
+    public Animator animator;
     
     
     public Vector2 horizontalMovement;
@@ -28,6 +29,10 @@ public class NoPickaxe : MonoBehaviour
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -59,20 +64,28 @@ public class NoPickaxe : MonoBehaviour
         if (horizontalMovement != 0)
         {
             spriteRenderer.flipX = horizontalMovement < 0;
-            
+            animator.SetBool("IsWalking", true);
         }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        animator.SetBool("IsJumping", !IsGrounded());
 
 
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if(playerRB != null && transform != null)
         {
-            playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.y, jumpForce);
-        }
-        else if (context.canceled && playerRB.linearVelocity.y > 0)
-        {
-            playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, playerRB.linearVelocity.y * 0.6f);
+            if (context.performed && IsGrounded())
+            {
+                playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.y, jumpForce);
+            }
+            else if (context.canceled && playerRB.linearVelocity.y > 0)
+            {
+                playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, playerRB.linearVelocity.y * 0.6f);
+            }
         }
     }
     private bool IsGrounded()
