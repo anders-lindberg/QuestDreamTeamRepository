@@ -10,6 +10,11 @@ TagManager:
   - PlatformBarrier
   - BarrierLeft
   - BarrierRight
+  - Hazard
+  - Pit
+  - item2
+  - item3
+  - item1
   layers:
   - Default
   - TransparentFX
@@ -47,6 +52,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: bgcolor
+    uniqueID: 768956893
+    locked: 0
+  - name: bgc
+    uniqueID: 1475285957
+    locked: 0
+  - name: bgb
+    uniqueID: 2891777863
+    locked: 0
+  - name: bga
+    uniqueID: 1364953329
+    locked: 0
   - name: background
     uniqueID: 1558336291
     locked: 0
@@ -55,6 +72,9 @@ TagManager:
     locked: 0
   - name: forgrund
     uniqueID: 517089725
+    locked: 0
+  - name: forgrundforgrund
+    uniqueID: 3167654935
     locked: 0
   m_RenderingLayers:
   - Default
