@@ -13,8 +13,8 @@ public class AttackRock : HurtBoxClass
         rb = GetComponent<Rigidbody2D>();
         Vector3 direction = target.transform.position - transform.position;
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
-        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot);
+        float rot = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot - 90f);
         Destroy(gameObject, 5f);
     }
 

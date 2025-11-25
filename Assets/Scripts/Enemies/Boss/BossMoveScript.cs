@@ -44,7 +44,7 @@ public class BossMoveScript : MonoBehaviour
         }
         else
         {
-            Instantiate(rockThrow, transform.position, Quaternion.identity);
+            Instantiate(rockThrow, transform.position, Quaternion.Euler(0f, 0f, 90f));
             timer = 0f;
         }
         

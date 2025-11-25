@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Throw cooldown")]
     [SerializeField] float throwCooldown = 1f;
     private float throwCooldownTimer = 0f;
+    Transform throwPoint;
     [Header("Player Component referencer")]
     private Rigidbody2D playerRB;
     [Header("Grounding")]
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         jump.performed += Jump;
         jump.canceled += Jump;
         animator = GetComponent<Animator>();
+        throwPoint = transform.Find("pickthrowpoint");
 
     }
 
@@ -55,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (throwPickaxe.WasPressedThisFrame() && throwCooldownTimer <= 0f)
         {
-            var pickaxeObj = Instantiate(pickaxePrefab, transform.position, Quaternion.identity);
+            var pickaxeObj = Instantiate(pickaxePrefab, throwPoint.position, Quaternion.identity);
             // Launch pickaxe in the direction player sprite is facing
             var throwScript = pickaxeObj.GetComponent<PickaxeThrow>();
             if (throwScript != null)
@@ -82,14 +84,24 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement != 0)
         {
             spriteRenderer.flipX = horizontalMovement < 0;
+          
             animator.SetBool("IsWalking", true);
         }
         else
         {
             animator.SetBool("IsWalking", false);
+         
         }
-        animator.SetBool("IsJumping", !IsGrounded());
+        if (spriteRenderer.flipX)
+        {
+            throwPoint.localPosition = new Vector3(-Mathf.Abs(throwPoint.localPosition.x), throwPoint.localPosition.y, throwPoint.localPosition.z);
+        }
+        else
+        {
+            throwPoint.localPosition = new Vector3(Mathf.Abs(throwPoint.localPosition.x), throwPoint.localPosition.y, throwPoint.localPosition.z);
+        }
 
+        animator.SetBool("IsJumping", !IsGrounded());
     }
     public void Jump(InputAction.CallbackContext context)
     {

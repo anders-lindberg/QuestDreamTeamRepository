@@ -20,6 +20,7 @@ public class BossHP : MonoBehaviour, IDamageable
     }
     public void TakeDamage(int amount)
     {
+        Debug.Log($"boss took damage, hp = {currentHp}");
         currentHp -= amount;
         if (currentHp <= 0)
         {
