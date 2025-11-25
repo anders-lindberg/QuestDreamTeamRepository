@@ -6,6 +6,7 @@ public class EnemyTypeBasic : MonoBehaviour
     public float speed = 2.0f;
     public float moveleftTime = 3.0f;
     public float moverightTime = 3.0f;
+    public GameObject HurtBox;
     SpriteRenderer spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,5 +47,17 @@ public class EnemyTypeBasic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Collider2D otherCollider = collision.collider;
+            Collider2D thisCollider = GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(thisCollider, otherCollider);
+            Instantiate(HurtBox, transform.position, Quaternion.identity);
+        }
+
     }
-}
+    
+    }
+
+    
+
