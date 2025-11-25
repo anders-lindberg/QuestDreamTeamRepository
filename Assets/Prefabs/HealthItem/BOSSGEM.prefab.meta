@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/HealthItem/BOSSGEM.prefab.meta
 guid: 94fa3d6c931d9ee4a82f7b76d4b5e3a1
 PrefabImporter:
+========
+guid: 0ee4b886ad22ce341952576b0157aca3
+NativeFormatImporter:
+>>>>>>>> NYEMMANR2:Assets/Animations/Playerpickaxe/Nye animationer/PICKAXE_jump.anim.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

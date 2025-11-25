@@ -11,8 +11,13 @@ public class NoPickaxe : MonoBehaviour
     private InputAction jump;
     public InputActionAsset playerActions;
     public Animator animator;
+<<<<<<< HEAD
     
     
+=======
+
+
+>>>>>>> NYEMMANR2
     public Vector2 horizontalMovement;
     
     [Header("Movement floats")]
@@ -32,7 +37,10 @@ public class NoPickaxe : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+<<<<<<< HEAD
         spriteRenderer = GetComponent<SpriteRenderer>();
+=======
+>>>>>>> NYEMMANR2
     }
     void OnEnable()
     {
@@ -65,6 +73,13 @@ public class NoPickaxe : MonoBehaviour
         {
             spriteRenderer.flipX = horizontalMovement < 0;
             animator.SetBool("IsWalking", true);
+<<<<<<< HEAD
+=======
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+>>>>>>> NYEMMANR2
         }
         else
         {
@@ -72,7 +87,7 @@ public class NoPickaxe : MonoBehaviour
         }
         animator.SetBool("IsJumping", !IsGrounded());
 
-
+        animator.SetBool("IsJumping", !IsGrounded());
     }
     public void Jump(InputAction.CallbackContext context)
     {
