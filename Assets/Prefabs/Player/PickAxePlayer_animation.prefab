@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8794341519972506002}
   - component: {fileID: 8792688513378858779}
   - component: {fileID: 2345640295561186401}
+  - component: {fileID: 5828116050646023442}
   m_Layer: 0
   m_Name: PickAxePlayer_animation
   m_TagString: Untagged
@@ -134,7 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickaxePrefab: {fileID: 8890610712737156061, guid: 2f8081c6040ce52428cc7d108d3b433b, type: 3}
   horizontalMovement: {x: 0, y: 0}
-  animator: {fileID: 0}
   jumpForce: 10
   moveSpeed: 7
   throwCooldown: 1
@@ -213,6 +213,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.089487314, y: 1.315}
   m_Size: {x: 1.1355586, y: 2.63}
   m_Direction: 0
+--- !u!114 &5828116050646023442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651873691974179942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1cfbd0e7739494ba79f3caa7e7e508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryUI: {fileID: 0}
 --- !u!1 &2209151476962108721
 GameObject:
   m_ObjectHideFlags: 0
