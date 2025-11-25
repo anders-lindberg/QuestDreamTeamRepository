@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private InputAction throwPickaxe;
     public GameObject pickaxePrefab;
     public Vector2 horizontalMovement;
+    public Animator animator;
     
     [Header("Movement floats")]
     [SerializeField]
@@ -41,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         throwPickaxe.Enable();
         jump.performed += Jump;
         jump.canceled += Jump;
-    
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -80,9 +82,13 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement != 0)
         {
             spriteRenderer.flipX = horizontalMovement < 0;
-            
+            animator.SetBool("IsWalking", true);
         }
-
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        animator.SetBool("IsJumping", !IsGrounded());
 
     }
     public void Jump(InputAction.CallbackContext context)

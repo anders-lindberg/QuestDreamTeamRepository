@@ -6,6 +6,8 @@ using System.Collections;
 public class NPCDialogue : MonoBehaviour
 
 {
+    int collected = GameManager.Instance.tNTCollected;
+
     public event Action OnFirstDialogueComplete;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
@@ -13,6 +15,10 @@ public class NPCDialogue : MonoBehaviour
 
     public string[] firstTimelines;
     public string[] repeatLines;
+
+    public string[] oneItemLines;
+    public string[] twoItemLines;
+    public string[] threeItemLines;
 
     public float typingSpeed = 0.02f;   // Hastighed hvis du vil have typing-effect (kan sættes til 0 for ingen)
     
@@ -44,6 +50,7 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         if (!playerInRange) return;
@@ -65,10 +72,28 @@ public class NPCDialogue : MonoBehaviour
 
         interactIcon.SetActive(false);
 
-        currentLines = hasTalked ? repeatLines : firstTimelines;
-        currentIndex = 0;
+        collected = GameManager.Instance.tNTCollected;
 
-        ShowLine();
+        if (collected <= 0)
+        {
+            Debug.Log(collected);
+            currentLines = hasTalked ? repeatLines : firstTimelines;
+            currentIndex = 0;
+            ShowLine();
+        }
+        else if (collected > 0) 
+        {
+            Debug.Log(collected);
+            switch (collected)
+            {
+                case 1: currentLines = oneItemLines; break;
+                case 2: currentLines = twoItemLines; break;
+                case 3: currentLines = threeItemLines; break;
+            }
+
+            currentIndex = 0;
+            ShowLine();
+        }
     }
 
     private void ShowLine()
