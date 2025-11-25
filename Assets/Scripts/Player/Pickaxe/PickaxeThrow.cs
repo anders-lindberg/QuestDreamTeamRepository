@@ -42,7 +42,6 @@ public class PickaxeThrow : MonoBehaviour
             damageable.TakeDamage(pickAxedamage);
         }
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
-
             Destroy(gameObject); 
     
     }

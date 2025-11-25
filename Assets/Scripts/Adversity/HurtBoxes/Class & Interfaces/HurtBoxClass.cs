@@ -8,7 +8,6 @@ public class HurtBoxClass : MonoBehaviour
     [SerializeField] protected string sourceTag;
     [SerializeField] protected bool isDestructable = true;
     private HashSet<GameObject> alreadyHit = new HashSet<GameObject>();
-    [SerializeField] GameObject vfx;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,11 +37,6 @@ public class HurtBoxClass : MonoBehaviour
 
             if (isDestructable)
             {
-                if(vfx != null)
-                {
-                    Instantiate(vfx, transform.position, Quaternion.identity);
-                }
-                
                 Destroy(gameObject);
             }
         }

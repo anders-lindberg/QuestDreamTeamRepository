@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         {
             currentHp = 0;
         }
-        Debug.Log("player took damage, HP is now" + currentHp);
+        Debug.Log("playerHealthmanager took damage, HP is now" + currentHp);
         if(currentHp <= 0)
         {
             gameObject.SetActive(false);

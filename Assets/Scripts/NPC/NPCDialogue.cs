@@ -87,7 +87,7 @@ public class NPCDialogue : MonoBehaviour
             switch (collected)
             {
                 case 1: currentLines = oneItemLines; break;
-                case 2: currentLines = twoItemLines; break;
+                case 2: currentLines =  twoItemLines; break;
                 case 3: currentLines = threeItemLines; break;
             }
 
