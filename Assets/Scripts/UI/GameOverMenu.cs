@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class GameOverMenu : MonoBehaviour
 {
-    [SerializeField] private PlayerHealthManager healthManager;
+    [SerializeField] private PlayerHealth player;
 
     private Button retryButton;
 
@@ -19,9 +19,8 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(healthManager.playerIsDead == true)
+        if(player.isDead == true)
         {
-            Debug.Log("Display death screen");
             DisplayGameOverMenu();
         }
     }
@@ -48,7 +47,5 @@ public class GameOverMenu : MonoBehaviour
     void OnRetryClicked()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-        healthManager.playerIsDead = false;
-        healthManager.currentHp = healthManager.maxHp;
     }
 }

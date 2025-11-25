@@ -7,15 +7,12 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
     // movement direction: -1 = left, 1 = right
     private float direction = -1f;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
     
     public bool flipSpriteOnTurn = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
-        spriteRenderer.flipX = true;
         
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -46,14 +43,14 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
             // BarrierLeft should make the enemy go right
             direction = 1f;
             if (flipSpriteOnTurn && spriteRenderer != null)
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
         }
         else if (other.CompareTag("BarrierRight"))
         {
             // BarrierRight should make the enemy go left
             direction = -1f;
             if (flipSpriteOnTurn && spriteRenderer != null)
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = true;
         }
     }
     

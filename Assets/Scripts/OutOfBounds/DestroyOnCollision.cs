@@ -2,18 +2,12 @@ using UnityEngine;
 
 public class DestroyOnCollision : MonoBehaviour
 {
-    [SerializeField] private PlayerHealthManager healthManager;
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private PlayerHealth player;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.SetActive(false);
-            healthManager.playerIsDead = true;
-        }
-        else
-        {
-            Destroy(collision);
+            player.TakeDamage(100);
         }
     }
-
 }
