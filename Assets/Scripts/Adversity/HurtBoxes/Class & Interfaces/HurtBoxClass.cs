@@ -6,6 +6,7 @@ public class HurtBoxClass : MonoBehaviour
     [SerializeField] protected int damageAmount = 1;
     [SerializeField] protected float lifeSpan = 0.2f;
     [SerializeField] protected string sourceTag;
+    [SerializeField] protected bool isDestructable = true;
     private HashSet<GameObject> alreadyHit = new HashSet<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,22 +20,30 @@ public class HurtBoxClass : MonoBehaviour
         {
             return;
         }
-        
+
         IDamageable hp = other.GetComponent<IDamageable>();
-        if(hp == null)
+        if (hp == null)
         {
             hp = other.GetComponentInParent<IDamageable>();
         }
-        if(hp == null)
+        if (hp == null)
         {
             hp = other.GetComponentInChildren<IDamageable>();
         }
-        if(hp != null && !other.CompareTag(sourceTag))
+        if (hp != null && !other.CompareTag(sourceTag))
         {
             hp.TakeDamage(damageAmount);
             alreadyHit.Add(targetRoot);
-            Destroy(gameObject);
+
+            if (isDestructable)
+            {
+                Destroy(gameObject);
+            }
         }
-        
+        DestroySelf();
+    }
+    protected virtual void DestroySelf()
+    {
+        Destroy(gameObject, lifeSpan);
     }
 }
