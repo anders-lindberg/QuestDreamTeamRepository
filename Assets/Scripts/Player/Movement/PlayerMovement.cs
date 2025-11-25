@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         if (throwPickaxe.WasPressedThisFrame() && throwCooldownTimer <= 0f)
         {
             var pickaxeObj = Instantiate(pickaxePrefab, transform.position, Quaternion.identity);
-            // Launch pickaxe in the direction player sprite is facing
+            // Launch pickaxe in the direction playerHealthmanager sprite is facing
             var throwScript = pickaxeObj.GetComponent<PickaxeThrow>();
             if (throwScript != null)
             {

@@ -9,8 +9,8 @@ public class EnemyHurtbox : HurtBoxClass
     }
     protected override void OnTriggerEnter2D(Collider2D other)
         {
-            // Here you can add logic to damage the player
-             // Destroy the hurtbox after hitting the player
+            // Here you can add logic to damage the playerHealthmanager
+             // Destroy the hurtbox after hitting the playerHealthmanager
              GameObject root = other.transform.root.gameObject;
 
              IDamageable hp = root.GetComponent<IDamageable>();

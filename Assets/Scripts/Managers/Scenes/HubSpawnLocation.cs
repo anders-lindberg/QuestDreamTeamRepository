@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HubSpawnLocation : MonoBehaviour
 {
-    //Håndterer player spawn logik - og loader ikke selve hub-scenen
+    //Håndterer playerHealthmanager spawn logik - og loader ikke selve hub-scenen
     [SerializeField] private string entranceID;
 
     private void Start()

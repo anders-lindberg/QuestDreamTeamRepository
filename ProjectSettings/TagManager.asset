@@ -16,6 +16,7 @@ TagManager:
   - item3
   - item1
   - UI
+  - Health
   layers:
   - Default
   - TransparentFX

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     //method that should be called when collecting a tnt part
     public void TNTCollected(int levelIndex)
     {
-        //based on the given levelindex, the corresponding bool should be set to true, so the manager knows which parts the player has collected (or not)
+        //based on the given levelindex, the corresponding bool should be set to true, so the manager knows which parts the playerHealthmanager has collected (or not)
         switch(levelIndex)
         {
             case 1: level1TNT = true; tNTCollected++; break;
