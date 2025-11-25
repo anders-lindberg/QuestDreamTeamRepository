@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private InputAction throwPickaxe;
     public GameObject pickaxePrefab;
     public Vector2 horizontalMovement;
-    
+    public Animator animator;
+
     [Header("Movement floats")]
     [SerializeField]
     float jumpForce = 5f;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         jump = InputSystem.actions.FindAction("Jump");
         throwPickaxe = InputSystem.actions.FindAction("Attack");
         playerRB = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         move.Enable();
         jump.Enable();
         throwPickaxe.Enable();
@@ -80,8 +82,13 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement != 0)
         {
             spriteRenderer.flipX = horizontalMovement < 0;
-            
+            animator.SetBool("IsWalking", true);
         }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        animator.SetBool("IsJumping", !IsGrounded());
 
 
     }
