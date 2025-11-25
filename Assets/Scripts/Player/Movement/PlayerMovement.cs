@@ -47,6 +47,13 @@ public class PlayerMovement : MonoBehaviour
         throwPoint = transform.Find("pickthrowpoint");
 
     }
+    void OnDisable()
+    {
+        move.Disable();
+        jump.Disable();
+        jump.performed -= Jump;
+        jump.canceled -= Jump;
+    }
 
     // Update is called once per frame
     void Update()
@@ -105,11 +112,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed && IsGrounded() && gameObject != null)
         {
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.y, jumpForce);
         }
-        else if (context.canceled && playerRB.linearVelocity.y > 0)
+        else if (context.canceled && playerRB.linearVelocity.y > 0 && gameObject != null)
         {
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, playerRB.linearVelocity.y * 0.6f);
         }

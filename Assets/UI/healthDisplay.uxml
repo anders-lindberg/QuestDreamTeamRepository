@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="HP: 5" name="hp" style="top: 5%; right: 0%; left: 3%; font-size: 35px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Sprites/Character/Pixeled.ttf?fileID=12800000&amp;guid=a7c10ce8d3b99904ba5f3495d8233efa&amp;type=3#Pixeled&quot;); color: rgb(255, 242, 242);" />
+    </ui:VisualElement>
+</ui:UXML>

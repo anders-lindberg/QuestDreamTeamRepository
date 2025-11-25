@@ -56,7 +56,7 @@ public class GateController : MonoBehaviour
         }
     }
 
-    private void OpenGate()
+    public void OpenGate()
     {
         anim.SetTrigger("Open");            //min lille animation
         gateCollider.enabled = false;       // Lågen forsvinder

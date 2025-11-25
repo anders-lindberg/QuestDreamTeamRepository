@@ -1205,16 +1205,12 @@ PrefabInstance:
       value: BatEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.88905996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.99
+      value: -0.4158
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.36
+      value: 14.9006
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1247,10 +1243,6 @@ PrefabInstance:
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -299.984
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558447992282166415, guid: 921707065d9831b4d919932501ddc488, type: 3}
-      propertyPath: speed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6558447992282166415, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: batPoint1
@@ -1783,16 +1775,12 @@ PrefabInstance:
       value: BatEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.88905996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1666164
+      value: 4.1985
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.118777
+      value: 15.1169
       objectReference: {fileID: 0}
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1825,10 +1813,6 @@ PrefabInstance:
     - target: {fileID: 4092520374690097361, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -299.984
-      objectReference: {fileID: 0}
-    - target: {fileID: 6558447992282166415, guid: 921707065d9831b4d919932501ddc488, type: 3}
-      propertyPath: speed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6558447992282166415, guid: 921707065d9831b4d919932501ddc488, type: 3}
       propertyPath: batPoint1

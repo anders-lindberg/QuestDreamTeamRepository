@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AndersLevel1.unity
     guid: a3c96922e25cc9c44bc64591e15ef138
+  - enabled: 1
+    path: Assets/Scenes/ChristianLevel.unity
+    guid: ac4077d391bbe1f4f84a576d4ed05fcc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

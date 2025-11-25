@@ -23,6 +23,13 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealthManager.Instance.ApplyDamage(1);
+        }
+    }
 
     // Update is called once per frame
     void Update()
