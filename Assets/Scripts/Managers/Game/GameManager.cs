@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public bool level3TNT;
 
 
+
     //Counts how many TNT parts are collected in total by adding +1 for each level that has its TNT collected.
     //Same as saying "if level1TNT = true {tntcollected += 1} else {tntcollected += 0} etc."
     public int tNTCollected = 0;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
             case 3: level3TNT = true; tNTCollected++; break;
         }
     }
+
 
 
     public bool HasQuestBeenCompleted()

@@ -37,7 +37,7 @@ public class PickaxeThrow : MonoBehaviour
         void OnCollisionEnter2D(Collision2D collision)
     {
        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
-       if(damageable != null)
+       if(damageable != null && !collision.gameObject.CompareTag("Player"))
         {
             damageable.TakeDamage(pickAxedamage);
         }

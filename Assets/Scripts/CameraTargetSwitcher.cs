@@ -13,7 +13,7 @@ public class CameraTargetSwitcher : MonoBehaviour
     {
         if (newTarget == null)
         {
-            newTarget = GameObject.FindWithTag("PlayerPickaxe").transform;
+            newTarget = GameObject.FindWithTag("Player").transform;
             SetNewTarget();
         }
     }

@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class HubSpawnLocation : MonoBehaviour
 {
-    //Håndterer player spawn logik - og loader ikke selve hub-scenen
+    [SerializeField] GameObject pickPrefab;
+    //Hï¿½ndterer player spawn logik - og loader ikke selve hub-scenen
     [SerializeField] private string entranceID;
+   
 
     private void Start()
     {
@@ -15,6 +17,8 @@ public class HubSpawnLocation : MonoBehaviour
             {
                 player.transform.position = transform.position;
             }
+
+            
         }
     }
 }
