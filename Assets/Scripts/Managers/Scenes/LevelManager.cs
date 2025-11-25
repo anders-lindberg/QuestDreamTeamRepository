@@ -98,11 +98,6 @@ public class LevelManager : MonoBehaviour
     /*Method which always loads the Hub-scene*/
     public void ReturnToHub()
     {
-        if (fadeDocument == null)
-        {
-            fadeDocument = GameObject.FindGameObjectWithTag("UI").GetComponent<UIDocument>();
-            fadeOverlay = fadeDocument.rootVisualElement.Q<VisualElement>("FadeOverlay");
-        }
         StartCoroutine(LoadScene("Hub"));
     }
 }
