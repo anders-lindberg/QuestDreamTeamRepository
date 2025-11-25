@@ -86,9 +86,9 @@ public class NPCDialogue : MonoBehaviour
             Debug.Log(collected);
             switch (collected)
             {
-                case 1: currentLines = hasTalked ? repeatLines : oneItemLines; break;
-                case 2: currentLines = hasTalked ? repeatLines : twoItemLines; break;
-                case 3: currentLines = hasTalked ? repeatLines : threeItemLines; break;
+                case 1: currentLines = oneItemLines; break;
+                case 2: currentLines =  twoItemLines; break;
+                case 3: currentLines = threeItemLines; break;
             }
 
             currentIndex = 0;
