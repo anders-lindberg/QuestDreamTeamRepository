@@ -13,7 +13,7 @@ public class HubSpawnLocation : MonoBehaviour
 
             if(player != null)
             {
-                player.transform.position = transform.position;
+                player.transform.position = gameObject.transform.position;
             }
         }
     }
