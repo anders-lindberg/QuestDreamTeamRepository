@@ -1,0 +1,30 @@
+using UnityEngine;
+
+public class AttackRock : HurtBoxClass
+{
+    float timer = 0f;
+    GameObject target;
+    [SerializeField] float bulletSpeed = 5f;
+    Rigidbody2D rb;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
+        Vector3 direction = target.transform.position - transform.position;
+        rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * bulletSpeed;
+        float rot = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot - 90f);
+        Destroy(gameObject, 5f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    protected override void DestroySelf()
+    {
+        
+    }
+}

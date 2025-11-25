@@ -16,7 +16,7 @@ public class PickaxeThrow : MonoBehaviour
     [Tooltip("Time (seconds) before gravity increases")]
     public float gravityIncreaseDelay = 1f;
     public Transform PlayerTransform;
-
+    [SerializeField] int pickAxedamage = 1;
     private Rigidbody2D rb;
     private float originalGravityScale;
 
@@ -36,6 +36,11 @@ public class PickaxeThrow : MonoBehaviour
     
         void OnCollisionEnter2D(Collision2D collision)
     {
+       IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+       if(damageable != null)
+        {
+            damageable.TakeDamage(pickAxedamage);
+        }
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Enemy"))
 
             Destroy(gameObject); 
