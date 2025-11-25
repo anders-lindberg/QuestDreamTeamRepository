@@ -10,6 +10,7 @@ public class NoPickaxe : MonoBehaviour
     private InputAction move;
     private InputAction jump;
     public InputActionAsset playerActions;
+    public Animator animator;
     
     
     public Vector2 horizontalMovement;
@@ -28,9 +29,13 @@ public class NoPickaxe : MonoBehaviour
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     void OnEnable()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
         
@@ -59,8 +64,13 @@ public class NoPickaxe : MonoBehaviour
         if (horizontalMovement != 0)
         {
             spriteRenderer.flipX = horizontalMovement < 0;
-            
+            animator.SetBool("IsWalking", true);
         }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        animator.SetBool("IsJumping", !IsGrounded());
 
 
     }
