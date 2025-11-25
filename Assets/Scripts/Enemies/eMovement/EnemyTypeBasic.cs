@@ -28,11 +28,11 @@ public class EnemyTypeBasic : MonoBehaviour
             if (moverightTime > 0)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
             }
             else
             {
-                    spriteRenderer.flipX = false;
+                    spriteRenderer.flipX = true;
                 moveleftTime = 3.0f;
                 moverightTime = 3.0f;
             }

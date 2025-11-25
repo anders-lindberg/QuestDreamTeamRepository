@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -621124143
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1189566732, guid: 84bcc6212c8aa184ab4e88a721dbf278, type: 3}
   m_Color: {r: 0.27251372, g: 0.94716984, b: 0.012509741, a: 1}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4124153214219205505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d177901fc0ba93d4f846fb007147fcf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 85f96d7bfcacaa2478109f3b10504b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyVFX: {fileID: 0}
@@ -132,7 +132,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
