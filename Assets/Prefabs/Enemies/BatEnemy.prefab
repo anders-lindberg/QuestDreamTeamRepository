@@ -110,6 +110,7 @@ MonoBehaviour:
   batPoint1: {fileID: 0}
   batPoint2: {fileID: 0}
   batPoint3: {fileID: 0}
+  particle: {fileID: 7359762206274889823, guid: 03c1a3a4eaace3f48b9b225711ed37e8, type: 3}
 --- !u!61 &7024369291083696258
 BoxCollider2D:
   m_ObjectHideFlags: 0

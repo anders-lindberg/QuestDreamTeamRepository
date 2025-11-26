@@ -20,6 +20,7 @@ public class BatEnemy : MonoBehaviour
     private float waitTimer = 0f;
     private bool isWaiting = false;
     private float currentWaitDuration = 0f;
+    public GameObject particle;
     
     void Start()
     {
@@ -82,6 +83,7 @@ public class BatEnemy : MonoBehaviour
         // Log for debugging
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
             SoundEffectManager.Play("Destroy");
         }

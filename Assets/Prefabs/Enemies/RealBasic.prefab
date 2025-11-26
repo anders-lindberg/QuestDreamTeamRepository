@@ -135,6 +135,7 @@ MonoBehaviour:
   moveleftTime: 3
   moverightTime: 3
   HurtBox: {fileID: 0}
+  particle: {fileID: 7359762206274889823, guid: 03c1a3a4eaace3f48b9b225711ed37e8, type: 3}
 --- !u!95 &8369475725430511623
 Animator:
   serializedVersion: 7

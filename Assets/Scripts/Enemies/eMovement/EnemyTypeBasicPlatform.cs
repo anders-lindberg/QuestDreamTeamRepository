@@ -7,6 +7,7 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
     // movement direction: -1 = left, 1 = right
     private float direction = -1f;
     private SpriteRenderer spriteRenderer;
+    public GameObject particle;
     
     public bool flipSpriteOnTurn = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,6 +21,7 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
         Debug.Log("Enemy collided with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
             SoundEffectManager.Play("Destroy");
         }

@@ -8,6 +8,7 @@ public class EnemyTypeBasic : MonoBehaviour
     public float moverightTime = 3.0f;
     public GameObject HurtBox;
     SpriteRenderer spriteRenderer;
+    public GameObject particle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,6 +46,7 @@ public class EnemyTypeBasic : MonoBehaviour
         // Log for debugging
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             Destroy(gameObject);
             SoundEffectManager.Play("Destroy");
         }

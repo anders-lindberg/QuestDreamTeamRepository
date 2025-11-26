@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyerTag: Pickaxe
+  particle: {fileID: 5640937170213071980, guid: 8bddc1bf3dd3d684088f0b09a4c96deb, type: 3}
 --- !u!61 &827026261691864719
 BoxCollider2D:
   m_ObjectHideFlags: 0
