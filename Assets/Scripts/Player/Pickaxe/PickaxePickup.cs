@@ -23,7 +23,7 @@ public class PickaxePickup : MonoBehaviour
             Transform collectorTransform = other.transform.parent != null ? other.transform.parent : other.transform;
             Vector3 spawnPosition = collectorTransform.position;
             Quaternion spawnRotation = collectorTransform.rotation;
-
+            SoundEffectManager.Play("Pickup");
             Destroy(collectorTransform.gameObject); // Destroy the parent collector
 
             Instantiate(replacementPrefab, spawnPosition, spawnRotation); // Spawn replacement

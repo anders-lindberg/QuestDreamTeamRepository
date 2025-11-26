@@ -14,6 +14,7 @@ public class HealthItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerHealthManager.Instance.Heal(2);
+            SoundEffectManager.Play("Heal");
             if(destroyVFX != null)
         {
             Instantiate(destroyVFX, transform.position, Quaternion.identity);

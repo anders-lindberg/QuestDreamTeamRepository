@@ -9,6 +9,7 @@ void OnCollisionEnter2D(Collision2D collision)
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
             Destroy(gameObject);
+            SoundEffectManager.Play("Bong");
         }
     }
 }

@@ -27,6 +27,7 @@ public class PlayerHealthManager : MonoBehaviour
     public void ApplyDamage(int amount)
     {
         currentHp -= amount;
+        SoundEffectManager.Play("Damage");
         Debug.Log("playerHealthmanager hp is"+ currentHp);
         if(currentHp <= 0 )
         {

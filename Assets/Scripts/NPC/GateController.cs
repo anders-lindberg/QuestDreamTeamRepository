@@ -63,5 +63,6 @@ public class GateController : MonoBehaviour
         interactIcon.SetActive(false);      // Fjern E-ikonet
         gateUnlocked = false;          // Forhindrer gentagen åbning :D
         Debug.Log("Lågen er åben!");
+        SoundEffectManager.Play("Gate");
     }
 }

@@ -21,6 +21,7 @@ public class TNTOnPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.TNTCollected(tntIndex);
+            SoundEffectManager.Play("Pickup");
             Destroy(gameObject);
         }
     }

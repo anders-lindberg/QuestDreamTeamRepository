@@ -21,6 +21,7 @@ public class EnemyTypeBasicPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
             Destroy(gameObject);
+            SoundEffectManager.Play("Destroy");
         }
     }
     void OnCollisionExit2D(Collision2D collision)

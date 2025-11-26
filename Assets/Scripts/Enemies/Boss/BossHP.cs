@@ -29,6 +29,7 @@ public class BossHP : MonoBehaviour, IDamageable
             {
                 Instantiate(bossDeathVFX, transform.position, Quaternion.identity);
             }
+            SoundEffectManager.Play("Destroy");
             Destroy(gameObject);
         }
     }

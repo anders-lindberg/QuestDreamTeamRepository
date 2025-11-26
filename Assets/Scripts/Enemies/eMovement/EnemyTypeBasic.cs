@@ -46,6 +46,7 @@ public class EnemyTypeBasic : MonoBehaviour
         if (collision.gameObject.CompareTag("Pickaxe"))
         {
             Destroy(gameObject);
+            SoundEffectManager.Play("Destroy");
         }
         if (collision.gameObject.CompareTag("Player"))
         {

@@ -85,6 +85,7 @@ public class NoPickaxe : MonoBehaviour
         if (context.performed && IsGrounded() && gameObject != null)
         {
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.y, jumpForce);
+            SoundEffectManager.Play("Jump");
         }
         else if (context.canceled && playerRB.linearVelocity.y > 0 && gameObject != null)
         {

@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if (throwPickaxe.WasPressedThisFrame() && throwCooldownTimer <= 0f)
         {
             var pickaxeObj = Instantiate(pickaxePrefab, throwPoint.position, Quaternion.identity);
+            SoundEffectManager.Play("Throw");
             // Launch pickaxe in the direction player sprite is facing
             var throwScript = pickaxeObj.GetComponent<PickaxeThrow>();
             if (throwScript != null)
@@ -114,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded() && gameObject != null)
         {
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.y, jumpForce);
+            SoundEffectManager.Play("Jump");
         }
         else if (context.canceled && playerRB.linearVelocity.y > 0 && gameObject != null)
         {
